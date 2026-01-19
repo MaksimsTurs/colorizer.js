@@ -1,0 +1,23 @@
+{
+  "name": "colorizer",
+  "version": "1.0.0",
+  "description": "Small library for simple coloring and styling of terminal output with ANSI charcters.",
+  "homepage": "https://github.com/MaksimsTurs/colorizer.js#readme",
+  "license": "ISC",
+  "author": "MaksimsTurs",
+  "type": "module",
+  "main": "./src/colorizer.ts",
+  "bugs": {
+    "url": "https://github.com/MaksimsTurs/colorizer.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaksimsTurs/colorizer.js.git"
+  },
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9"
+  }
+}
