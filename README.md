@@ -3,39 +3,56 @@
 Small library for simple coloring and styling of terminal output with ANSI characters.
 
 ## Documentation
-Its important that you should call `fg` (Background color) or `bg` (Font color) function before calling one of color functions like `hex` or `rgb` so that the library could create the correct order of ANSI characters.\
-`hex` function takes over 24 bit value.
+Its important that you should call `background` or `font` function before calling one of color functions like `hex` or `rgb` so that the library could create the correct order of ANSI characters. `hex` function takes over 24 bit value.
 
+First, import the library
 ```js
-import colorizer from "colorizer.ts";
+import colorizer from "colorizer.js";
+```
 
+This will work.
+```js
 console.log(
-  // This will work.
   colorizer()
     .bold()
     .underline()
-    .fg()
+    .font()
     .rgb(255, 255, 0)
     .text("WARN")
 );
-
+```
+This will work too.
+```js
 console.log(
-  // This will work.
   colorizer()
+    .background()
+    .hex(0xff_ff_ff)
+    //     R  G  B 
     .bold()
     .underline()
-    .bg()
-    .hex(0xff_ff_ff_ff)
-    //     R  G  B  
-    .text("INFO")
+    .text("WARN")
 );
-
+```
+This will not work.
+```js
 console.log(
-  // This will not work.
   colorizer()
+    // On whom should this color be applied??
+    .hex(0xff_ff_ff)
     .bold()
     .underline()
-    .rgb(255, 255, 0)
+    .text("WARN")
+);
+```
+This will not work too.
+```js
+console.log(
+  colorizer()
+    // Incorrect sequence of ANSI characters! 
+    .font()
+    .bold() // <- Either move it before applying colors or after.
+    .hex(0xff_ff_ff)
+    .underline()
     .text("WARN")
 );
 ```
@@ -45,7 +62,7 @@ import colorizer from "colorizer.ts";
 
 const warn = colorizer()
   .bold()
-  .bg()
+  .font()
   .rgb(255, 255, 0)
   .text;
 
