@@ -8,7 +8,7 @@ export type Colorizer = {
   /** Set the font color. */
   font:           () => Colorizer
   /** Set the background color. */
-  fg:             () => Colorizer
+  background:     () => Colorizer
   /** Should be 24 bit value. */
   hex:            (hex: number) => Colorizer
   rgb:            (r: number, g: number, b: number) => Colorizer

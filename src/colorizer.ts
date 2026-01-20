@@ -51,7 +51,7 @@ export default function colorizer(): Colorizer {
 
       return this;
     },
-    fg: function(): Colorizer {
+    background: function(): Colorizer {
       styles.push(STYLES.FG);
 
       return this;
