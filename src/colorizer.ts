@@ -2,7 +2,7 @@ import STYLES from "./const/STYLES.const.ts";
 
 import type { Colorizer } from "./colorizer.type.ts";
 
-import isFillLocation from "./utils/is-fill-location.util.ts";
+import isFillContextValid from "./utils/is-fill-context-valid.util.ts";
 
 const _warn: Colorizer["text"] = colorizer()
   .bold()
@@ -45,7 +45,7 @@ export default function colorizer(): Colorizer {
 
       return this;
     },
-    // Fill locations.
+    // Fill contexts.
     font: function(): Colorizer {
       styles.push(STYLES.BG);
 
@@ -62,7 +62,7 @@ export default function colorizer(): Colorizer {
       const g: number = hex >> 8  & 0xff;
       const b: number = hex >> 0  & 0xff;
 
-      if(!isFillLocation(styles.at(-1))) {
+      if(!isFillContextValid(styles.at(-1))) {
         console.warn(_warn("[WARN]:"), _text(`The hex color does not have effect because the fill location "${styles.at(-1)}" is not valid!`));
         console.warn(_warn("[WARN]:"), _text("Call the \"fg\" function for background color or \"bg\" for font color!"));
       }
@@ -72,7 +72,7 @@ export default function colorizer(): Colorizer {
       return this;
     },
     rgb: function(r: number, g: number, b: number): Colorizer {
-      if(!isFillLocation(styles.at(-1))) {
+      if(!isFillContextValid(styles.at(-1))) {
         console.warn(_warn("[WARN]:"), _text(`The rgb color does not have effect because the fill location "${styles.at(-1)}" is not valid!`));
         console.warn(_warn("[WARN]:"), _text("Call the \"fg\" function for background color or \"bg\" for font color!"));
       }
