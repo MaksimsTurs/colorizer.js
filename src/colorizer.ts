@@ -6,12 +6,12 @@ import isFillLocation from "./utils/is-fill-location.util.ts";
 
 const _warn: Colorizer["text"] = colorizer()
   .bold()
-  .bg()
+  .font()
   .rgb(170, 170, 0)
   .text;
 const _text: Colorizer["text"] = colorizer()
   .dim()
-  .bg()
+  .font()
   .rgb(255, 255, 255)
   .text;
 
@@ -46,7 +46,7 @@ export default function colorizer(): Colorizer {
       return this;
     },
     // Fill locations.
-    bg: function(): Colorizer {
+    font: function(): Colorizer {
       styles.push(STYLES.BG);
 
       return this;

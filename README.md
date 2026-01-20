@@ -1,6 +1,6 @@
 # colorizer.js
 
-Small library for simple coloring and styling of terminal output with ANSI charcters.
+Small library for simple coloring and styling of terminal output with ANSI characters.
 
 ## Documentation
 Its important that you should call `fg` (Background color) or `bg` (Font color) function before calling one of color functions like `hex` or `rgb` so that the library could create the correct order of ANSI characters.\

@@ -6,7 +6,7 @@ export type Colorizer = {
   italic:         () => Colorizer
   bold:           () => Colorizer
   /** Set the font color. */
-  bg:             () => Colorizer
+  font:           () => Colorizer
   /** Set the background color. */
   fg:             () => Colorizer
   /** Should be 24 bit value. */
