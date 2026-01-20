@@ -2,7 +2,7 @@ export type Colorizer = {
   strikeThrought: () => Colorizer
   underline:      () => Colorizer
   /** Reduce the intensity of backround and font colors. */
-  dim:            () => Colorizer
+  transparent:    () => Colorizer
   italic:         () => Colorizer
   bold:           () => Colorizer
   /** Set the font color. */

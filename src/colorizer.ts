@@ -10,7 +10,7 @@ const _warn: Colorizer["text"] = colorizer()
   .rgb(170, 170, 0)
   .text;
 const _text: Colorizer["text"] = colorizer()
-  .dim()
+  .transparent()
   .font()
   .rgb(255, 255, 255)
   .text;
@@ -30,8 +30,8 @@ export default function colorizer(): Colorizer {
 
       return this;
     },
-    dim: function(): Colorizer {
-      styles.push(STYLES.DIM);
+    transparent: function(): Colorizer {
+      styles.push(STYLES.TRANSPARENT);
 
       return this;
     },
