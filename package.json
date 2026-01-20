@@ -13,11 +13,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaksimsTurs/colorizer.js.git"
-  },
-  "dependencies": {
-    "undici-types": "^7.16.0"
-  },
-  "devDependencies": {
-    "@types/node": "^25.0.9"
   }
 }
