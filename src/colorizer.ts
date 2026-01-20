@@ -63,7 +63,7 @@ export default function colorizer(): Colorizer {
       const b: number = hex >> 0  & 0xff;
 
       if(!isFillContextValid(styles.at(-1))) {
-        console.warn(_warn("[WARN]:"), _text(`The hex color does not have effect because the fill location "${styles.at(-1)}" is not valid!`));
+        console.warn(_warn("[WARN]:"), _text(`The hex color does not have effect because the fill context "${styles.at(-1)}" is not valid!`));
         console.warn(_warn("[WARN]:"), _text("Call the \"fg\" function for background color or \"bg\" for font color!"));
       }
 
@@ -73,7 +73,7 @@ export default function colorizer(): Colorizer {
     },
     rgb: function(r: number, g: number, b: number): Colorizer {
       if(!isFillContextValid(styles.at(-1))) {
-        console.warn(_warn("[WARN]:"), _text(`The rgb color does not have effect because the fill location "${styles.at(-1)}" is not valid!`));
+        console.warn(_warn("[WARN]:"), _text(`The rgb color does not have effect because the fill context "${styles.at(-1)}" is not valid!`));
         console.warn(_warn("[WARN]:"), _text("Call the \"fg\" function for background color or \"bg\" for font color!"));
       }
 
