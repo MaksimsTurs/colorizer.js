@@ -1,5 +1,5 @@
 {
-  "name": "colorizer.js",
+  "name": "@maksims/colorizer.js",
   "version": "1.0.1",
   "description": "Small library for simple coloring and styling of terminal output with ANSI charcters.",
   "homepage": "https://github.com/MaksimsTurs/colorizer.js#readme",
