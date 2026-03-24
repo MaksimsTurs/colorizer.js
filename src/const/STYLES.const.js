@@ -6,6 +6,7 @@ const STYLES = {
   UNDERLINE:        "\x1b[4m",
   BLINKING:         "\x1b[5m",
   REVERSE:          "\x1b[7m",
+  HIDDEN:           "\x1b[8m",
   STRIKE_THROUGHT:  "\x1b[9m",
 };
 
