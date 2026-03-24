@@ -5,6 +5,7 @@ const STYLES = {
   ITALIC:           "\x1b[3m",
   UNDERLINE:        "\x1b[4m",
   BLINKING:         "\x1b[5m",
+  REVERSE:          "\x1b[7m",
   STRIKE_THROUGHT:  "\x1b[9m",
 };
 
