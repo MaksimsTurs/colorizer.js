@@ -6,7 +6,7 @@
   "license": "ISC",
   "author": "MaksimsTurs",
   "type": "module",
-  "main": "./src/colorizer.ts",
+  "main": "./src/colorizer.js",
   "bugs": {
     "url": "https://github.com/MaksimsTurs/colorizer.js/issues"
   },
