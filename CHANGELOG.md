@@ -1,6 +1,11 @@
+## Docs
+docs: update README.md
+
 ## Chore
 chore(package.json): update path to the main file
 chore: update library version
+chore: update package description
+chore: add CHANGELOG.md
 
 ## Refactor
 refactor(const/STYLES): rename TRANSPARENT into DIM
