@@ -93,10 +93,7 @@ class Colorizer {
    *  @returns {string}
    */
   text(text) {
-    this.#styles.push(text);
-    this.#styles.push(STYLES.RESET);
-
-    return this.#styles.join("");
+    return `${this.#styles.join("")}${text}${STYLES.RESET}`;
   };
   /**
    *  @private
